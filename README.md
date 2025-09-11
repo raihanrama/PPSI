@@ -193,7 +193,7 @@ Proyek ini dikembangkan untuk keperluan akademik. Untuk kontribusi:
 Jika menemukan bug atau ingin request fitur baru, silakan buat issue di repository ini atau hubungi:
 
 📧 Email: [muhammadraihan291003@gmail.com](mailto:muhammadraihan291003@gmail.com)  
-📱 WhatsApp: +62-xxx-xxxx-xxxx
+📱 WhatsApp: +62-821-1278-0864
 
 ## 📄 License
 
