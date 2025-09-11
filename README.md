@@ -190,7 +190,7 @@ Proyek ini dikembangkan untuk keperluan akademik. Untuk kontribusi:
 
 ## 🐛 Bug Reports
 
-Jika menemukan bug atau ingin request fitur baru, silakan buat issue di repository ini atau hubungi:
+Jika menemukan bug atau ingin request fitur baru, silakan buat issue di repository ini atau hubungi kami melalui:
 
 📧 Email: [muhammadraihan291003@gmail.com](mailto:muhammadraihan291003@gmail.com)  
 📱 WhatsApp: +62-821-1278-0864
