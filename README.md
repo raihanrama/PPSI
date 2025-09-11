@@ -19,7 +19,7 @@ PPSI (Proyek Praktikum Sistem Informasi) adalah sebuah aplikasi web yang dikemba
 - **Manajemen Pendaftaran Sidang** - Administrasi jadwal dan data sidang
 - ** Program MSIB** - Tracking dan manajemen program MSIB
 
-## ✨ Fitur Utama
+## ✨ Fitur-Fitur Utama
 
 ### 🔐 **Sistem Autentikasi**
 - Login dan registrasi pengguna
