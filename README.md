@@ -192,7 +192,7 @@ Proyek ini dikembangkan untuk keperluan akademik. Untuk kontribusi:
 
 Jika menemukan bug atau ingin request fitur baru, silakan buat issue di repository ini atau hubungi:
 
-📧 Email: [your-email@university.ac.id](mailto:your-email@university.ac.id)  
+📧 Email: [muhammadraihan291003@gmail.com](mailto:muhammadraihan291003@gmail.com)  
 📱 WhatsApp: +62-xxx-xxxx-xxxx
 
 ## 📄 License
@@ -225,7 +225,7 @@ Copyright (c) 2024 [Nama Anda]
 **⭐ Jangan lupa berikan star jika proyek ini membantu! ⭐**
 
 Made with ❤️ by **[Nama Anda]**  
-Jurusan Sistem Informasi - Universitas [Nama Universitas]
+Jurusan Sistem Informasi -  [Gunadarma University]
 
 [🔝 Back to top](#-ppsi---sistem-informasi-jurusan)
 
