@@ -22,7 +22,7 @@ PPSI (Proyek Praktikum Sistem Informasi) adalah sebuah aplikasi web yang dikemba
 ## ✨ Fitur-Fitur Utama
 
 ### 🔐 **Sistem Autentikasi**
-- Login dan registrasi pengguna
+- Login dan registrasi nahasiswa dan staff jurusan
 - Reset password dengan email verification
 - Session management yang aman
 
