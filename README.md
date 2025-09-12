@@ -6,7 +6,7 @@
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://html.spec.whatwg.org/)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://www.w3.org/Style/CSS/)
 
-> **Sistem Pengelolaan Data Akademik Jurusan Sistem Informasi**  
+> **Sistem Pengelolaan Data Akademik Jurusan Sistem Informasi Universitas Gunadarma**  
 > Platform terintegrasi untuk mengelola data Praktik Industri (PI), Sidang, dan MSIB (Magang dan Studi Independen Bersertifikat)
 
 ---
