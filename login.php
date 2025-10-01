@@ -608,3 +608,74 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
         </div>
     </div>
+
+        <script>
+        let slides = document.querySelectorAll('.slide');
+        let currentSlide = 0;
+
+        function initializeSlideshow() {
+            setInterval(nextSlide, 6000);
+        }
+
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.getElementById('togglePassword');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        }
+
+        const flashMessage = <?php echo json_encode(isset($_SESSION['flash_message']) ? $_SESSION['flash_message'] : ''); ?>;
+        const flashType = <?php echo json_encode(isset($_SESSION['flash_type']) ? $_SESSION['flash_type'] : ''); ?>;
+        const notificationElement = document.getElementById('notification');
+
+        if (flashMessage) {
+            const notificationContent = `
+                <div class="notification-content">
+                    <i class="notification-icon fas ${flashType === 'success' ? 'fa-check-circle' : 'fa-exclamation-circle'}"></i>
+                    <div class="notification-text">
+                        <strong>Registrasi Berhasil</strong><br>
+                        ${flashMessage}
+                    </div>
+                    <span class="close-notification" onclick="closeNotification()">
+                        <i class="fas fa-times"></i>
+                    </span>
+                </div>
+            `;
+
+            notificationElement.innerHTML = notificationContent;
+            notificationElement.classList.add(flashType);
+            notificationElement.style.display = 'block';
+
+            setTimeout(() => {
+                closeNotification();
+            }, 5000);
+        }
+
+        function closeNotification() {
+            notificationElement.style.opacity = '0';
+            setTimeout(() => {
+                notificationElement.style.display = 'none';
+                notificationElement.style.opacity = '1';
+            }, 300);
+        }
+
+        document.addEventListener('DOMContentLoaded', initializeSlideshow);
+    </script>
+</body>
+
+</html>
+
