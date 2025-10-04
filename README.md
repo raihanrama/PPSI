@@ -1,4 +1,4 @@
-# 🎓 PPSI - Sistem Informasi Gunadarma
+# 🎓 PPSI - Sistem Informasi Gunadarma University
 
 [![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://php.net/)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
