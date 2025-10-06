@@ -1,602 +1,596 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Sistem Administrasi</title>
+    <link rel="icon" href="assets\images\logo Gunadarma.png" type="image/png">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+            background-color: #f5f5f5;
             min-height: 100vh;
-            overflow-x: hidden;
         }
 
-        /* Navbar Modern */
+        /* Navbar Styles */
         .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1.2rem 5%;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-
-        .navbar-container {
-            max-width: 1400px;
-            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.5rem;
         }
 
         .logo-image {
-            height: 45px;
+            height: 40px;
             width: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .logo-image:hover {
-            transform: scale(1.05);
         }
 
         .brand-text {
-            font-size: 1.3rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #592693, #7439b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+            white-space: nowrap;
         }
 
+        /* Navigation Links */
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 1.5rem;
             align-items: center;
         }
 
         .nav-links a {
             text-decoration: none;
             color: #333;
-            font-weight: 600;
-            font-size: 1rem;
-            position: relative;
+            font-weight: 500;
             transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(135deg, #592693, #7439b8);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
+        .nav-links a:hover {
+            color: #0066cc;
         }
 
         .login-btn {
-            background: linear-gradient(135deg, #592693, #7439b8);
-            color: white !important;
-            padding: 0.7rem 2rem;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(89, 38, 147, 0.3);
+            color: black;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
         }
 
         .login-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(89, 38, 147, 0.4);
-        }
-
-        .login-btn::after {
-            display: none;
-        }
-
-        /* Hero Section */
-        .hero-section {
-            max-width: 1400px;
-            margin: 4rem auto;
-            padding: 0 5%;
-            text-align: center;
-        }
-
-        .hero-title {
-            font-size: 3rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #592693, #7439b8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-            animation: fadeInDown 0.8s ease;
-        }
-
-        .hero-subtitle {
-            font-size: 1.2rem;
-            color: #666;
-            line-height: 1.8;
-            max-width: 900px;
-            margin: 0 auto 4rem;
-            animation: fadeInUp 0.8s ease;
-        }
-
-        /* Feature Cards - Modern Grid */
-        .features-grid {
-            max-width: 1400px;
-            margin: 0 auto 5rem;
-            padding: 0 5%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .feature-card {
-            background: white;
-            border-radius: 24px;
-            padding: 3rem 2.5rem;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-        }
-
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 6px;
-            background: linear-gradient(135deg, #592693, #7439b8);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-
-        .feature-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .feature-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 60px rgba(89, 38, 147, 0.15);
-        }
-
-        .feature-icon-wrapper {
-            width: 80px;
-            height: 80px;
-            border-radius: 20px;
-            background: linear-gradient(135deg, #592693, #7439b8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 2rem;
-            transition: all 0.4s ease;
-        }
-
-        .feature-card:hover .feature-icon-wrapper {
-            transform: rotate(10deg) scale(1.1);
-        }
-
-        .feature-title {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 1rem;
-        }
-
-        .feature-description {
-            color: #666;
-            line-height: 1.7;
-            font-size: 1.05rem;
-        }
-
-        /* Workflow Section - Modern Timeline */
-        .workflow-section {
-            max-width: 1400px;
-            margin: 0 auto 3rem;
-            padding: 0 5%;
-        }
-
-        .workflow-card {
-            background: white;
-            border-radius: 24px;
-            padding: 3rem;
-            margin-bottom: 3rem;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .workflow-card:hover {
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
-        }
-
-        .workflow-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .workflow-number {
-            width: 50px;
-            height: 50px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: 700;
+            background-color: #0052a3;
             color: white;
         }
 
-        .workflow-title {
-            font-size: 1.8rem;
-            font-weight: 700;
+        /* Container and Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .title {
+            font-size: 2rem;
             color: #333;
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
 
-        .progress-container {
-            background: #f0f0f0;
-            height: 8px;
-            border-radius: 50px;
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            text-align: justify;
+            max-width: 1600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Enhanced Feature Cards */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(145deg, #592693, #7439b8);
+            border-radius: 20px;
+            padding: 2rem;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
             overflow: hidden;
-            margin-bottom: 2.5rem;
+            min-height: 350px;
         }
 
-        .progress-bar {
-            height: 100%;
-            border-radius: 50px;
-            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(89, 38, 147, 0.2);
+        }
+
+        .feature-icon {
+            background: rgba(255, 255, 255, 0.1);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
             position: relative;
         }
 
-        .progress-bar::after {
+        .feature-title::after {
             content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-            animation: shimmer 2s infinite;
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: white;
+            margin-top: 0.5rem;
+            transition: width 0.3s ease;
         }
 
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+        .feature-card:hover .feature-title::after {
+            width: 100px;
+        }
+
+        .feature-description {
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Enhanced Workflow Section */
+        .workflow-container {
+            border: none;
+            background: white;
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
         .steps-container {
             display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
             justify-content: center;
+            align-items: center;
+            gap: 5px;
+            margin-top: 1.5rem;
+            padding: 1rem 0;
+            flex-wrap: wrap;
         }
 
-        .step-item {
-            flex: 0 1 calc(20% - 1rem);
-            min-width: 140px;
-            background: white;
-            border-radius: 16px;
-            padding: 1.5rem 1rem;
-            text-align: center;
-            position: relative;
-            transition: all 0.3s ease;
-            border: 2px solid #f0f0f0;
-        }
-
-        .step-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .step-number {
-            width: 40px;
-            height: 40px;
+        .step {
+            width: 100px;
+            height: 100px;
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
-            font-weight: 700;
-            font-size: 1.2rem;
-            color: white;
+            flex-direction: column;
+            font-weight: bold;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            margin: 5px;
+            padding: 0.5rem;
+        }
+
+        .step:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
 
         .step-text {
-            color: #555;
-            font-size: 0.95rem;
-            font-weight: 600;
-            line-height: 1.4;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+            text-align: center;
+            opacity: 0.9;
+            line-height: 1.1;
         }
 
-        /* Color Schemes */
-        .penelitian-color {
-            background: linear-gradient(135deg, #592693, #7439b8);
+        .step-number {
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
         }
 
-        .sarjana-color {
-            background: linear-gradient(135deg, #6baf5f, #4a9b3d);
+        .titlestep {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #333;
+            text-align: center;
+            font-family: "Times New Roman", Times, serif;
         }
 
-        .msib-color {
-            background: linear-gradient(135deg, #4a6fa1, #366290);
+        /* Progress Bar Styles */
+        .progress-bar {
+            height: 4px;
+            background: #eee;
+            border-radius: 2px;
+            margin: 1rem 0;
+            position: relative;
         }
 
-        /* Hamburger Menu */
+        .progress {
+            height: 100%;
+            border-radius: 2px;
+            width: 0;
+            transition: width 0.3s ease;
+        }
+
+        /* Responsive Design Updates */
+        @media (max-width: 768px) {
+            .workflow-container {
+                padding: 1rem;
+            }
+
+            .step {
+                width: 90px;
+                height: 90px;
+            }
+
+            .step-text {
+                font-size: 0.75rem;
+            }
+
+            .titlestep {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .step {
+                width: 80px;
+                height: 80px;
+            }
+
+            .step-text {
+                font-size: 0.7rem;
+            }
+
+            .titlestep {
+                font-size: 1.2rem;
+            }
+        }
+
+        /* Hamburger Menu Styles */
         .hamburger {
             display: none;
             flex-direction: column;
-            gap: 5px;
-            background: none;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
             border: none;
             cursor: pointer;
+            padding: 0;
+            z-index: 1001;
         }
 
         .hamburger span {
-            width: 28px;
+            width: 30px;
             height: 3px;
-            background: #592693;
-            border-radius: 3px;
-            transition: all 0.3s ease;
+            background: #333;
+            border-radius: 10px;
+            transition: all 0.3s linear;
+            position: relative;
+            transform-origin: 1px;
         }
 
-        /* Animations */
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Specific Step Colors */
+        .step-ilmiah {
+            background-color: #592693;
         }
 
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .step-sarjana {
+            background-color: #6baf5f;
+        }
+
+        .step-msib {
+            background-color: #4a6fa1;
         }
 
         /* Responsive Design */
-        @media (max-width: 1024px) {
-            .features-grid {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            }
-
-            .step-item {
-                flex: 0 1 calc(25% - 1rem);
-            }
-        }
-
         @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
             .hamburger {
                 display: flex;
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+            }
+
+            .logo-container {
+                margin-bottom: 1rem;
             }
 
             .nav-links {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: white;
-                flex-direction: column;
-                padding: 2rem;
-                gap: 1.5rem;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
                 display: none;
+                width: 100%;
+                flex-direction: column;
+                padding: 1rem 0;
             }
 
             .nav-links.active {
                 display: flex;
             }
 
-            .hero-title {
-                font-size: 2.2rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-
-            .features-grid {
+            .features {
                 grid-template-columns: 1fr;
             }
 
-            .step-item {
-                flex: 0 1 calc(50% - 1rem);
+            .step {
+                min-width: 100px;
+                height: 100px;
             }
 
-            .workflow-card {
-                padding: 2rem 1.5rem;
+            .step-text {
+                font-size: 0.9rem;
+            }
+
+            .titlestep,
+            .titlestep1 {
+                font-size: 1.4rem;
+            }
+
+            .container {
+                padding: 1rem;
+            }
+
+            .feature-card {
+                min-height: auto;
+                padding: 1.5rem;
             }
         }
 
         @media (max-width: 480px) {
-            .navbar {
-                padding: 1rem 4%;
+            .workflow-container {
+                padding: 1.5rem 1rem;
             }
 
-            .hero-title {
-                font-size: 1.8rem;
+            .steps-container {
+                gap: 20px;
             }
 
-            .step-item {
-                flex: 0 1 100%;
+            .step {
+                min-width: 90px;
+                height: 90px;
             }
 
-            .workflow-title {
-                font-size: 1.4rem;
+            .step-text {
+                font-size: 0.8rem;
+            }
+
+            .title {
+                font-size: 1.5rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .feature-title {
+                font-size: 1.3rem;
+            }
+
+            .feature-description {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Utility Classes */
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .fade-out {
+            animation: fadeOut 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
             }
         }
     </style>
 </head>
+
 <body>
-    <!-- Navbar -->
     <nav class="navbar">
-        <div class="navbar-container">
-            <div class="logo-container">
-                <img src="assets/images/logo.png" alt="Logo Universitas" class="logo-image">
-                <span class="brand-text">SISTEM ADMINISTRASI</span>
-            </div>
-            <button class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <div class="nav-links" id="navLinks">
-                <a href="index.php">Home</a>
-                <a href="about.php">About</a>
-                <a href="login.php" class="login-btn">Login</a>
-            </div>
+        <div class="logo-container">
+            <img src="assets/images/logo.png" alt="Logo Universitas" class="logo-image">
+            <span class="brand-text">SISTEM ADMINISTRASI</span>
+            <link rel="stylesheet" href="style.css">
+        </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="login.php" class="login-btn">Login</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero-section">
-        <h1 class="hero-title">Sistem Administrasi Program Studi</h1>
-        <p class="hero-subtitle">
+
+    <div class="container">
+        <h1 class="title">Sistem Administrasi Program Studi</h1>
+        <p class="subtitle">
             Sistem ini dirancang untuk membantu mahasiswa dan staf administrasi dalam menyelesaikan berbagai
             proses administrasi akademik secara efisien dan terstruktur. Dimana administrasi yang dapat dilakukan
-            di dalam sistem ini adalah sebagai berikut:
+            didalam sistem ini adalah seperti berikut:
         </p>
-    </section>
 
-    <!-- Features Grid -->
-    <div class="features-grid">
-        <div class="feature-card">
-            <div class="feature-icon-wrapper">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">Status Penelitian Ilmiah</h3>
+                <p class="feature-description">
+                    Memudahkan mahasiswa untuk melakukan pengecekan status penelitian ilmiah secara real-time
+                    dan mendapatkan informasi terkini mengenai progress penelitian.
+                </p>
             </div>
-            <h3 class="feature-title">Status Penelitian Ilmiah</h3>
-            <p class="feature-description">
-                Memudahkan mahasiswa untuk melakukan pengecekan status penelitian ilmiah secara real-time
-                dan mendapatkan informasi terkini mengenai progress penelitian.
-            </p>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path
+                            d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">Pendaftaran Sidang Sarjana</h3>
+                <p class="feature-description">
+                    Sistem terpadu untuk proses pendaftaran sidang sarjana dengan sistem yang efisien
+                    dan terorganisir untuk kelancaran proses sidang para mahasiswa.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2">
+                        <path
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                </div>
+                <h3 class="feature-title">Surat Rekomendasi MSIB</h3>
+                <p class="feature-description">
+                    Layanan pembuatan surat rekomendasi untuk program Magang dan Studi Independen
+                    Bersertifikat (MSIB) secara efektif dan efisien.
+                </p>
+            </div>
         </div>
 
-        <div class="feature-card">
-            <div class="feature-icon-wrapper">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-                </svg>
+        <!-- Workflow sections -->
+        <div class="workflow-container">
+            <h1 class="titlestep">1. Penelitian Ilmiah</h1>
+            <div class="progress-bar">
+                <div class="progress" id="progress1"></div>
             </div>
-            <h3 class="feature-title">Pendaftaran Sidang Sarjana</h3>
-            <p class="feature-description">
-                Sistem terpadu untuk proses pendaftaran sidang sarjana dengan sistem yang efisien
-                dan terorganisir untuk kelancaran proses sidang para mahasiswa.
-            </p>
+            <div class="steps-container" id="workflow1">
+            </div>
         </div>
-
-        <div class="feature-card">
-            <div class="feature-icon-wrapper">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
+        <div class="workflow-container">
+            <h1 class="titlestep">2. Sidang Sarjana</h1>
+            <div class="progress-bar">
+                <div class="progress" id="progress2"></div>
             </div>
-            <h3 class="feature-title">Surat Rekomendasi MSIB</h3>
-            <p class="feature-description">
-                Layanan pembuatan surat rekomendasi untuk program Magang dan Studi Independen
-                Bersertifikat (MSIB) secara efektif dan efisien.
-            </p>
+            <div class="steps-container" id="workflow2">
+            </div>
         </div>
-    </div>
-
-    <!-- Workflow Section -->
-    <div class="workflow-section">
-        <!-- Penelitian Ilmiah -->
-        <div class="workflow-card">
-            <div class="workflow-header">
-                <div class="workflow-number penelitian-color">1</div>
-                <h2 class="workflow-title">Penelitian Ilmiah</h2>
+        <div class="workflow-container">
+            <h1 class="titlestep">3. MSIB</h1>
+            <div class="progress-bar">
+                <div class="progress" id="progress3"></div>
             </div>
-            <div class="progress-container">
-                <div class="progress-bar penelitian-color" style="width: 11%"></div>
+            <div class="steps-container" id="workflow3">
             </div>
-            <div class="steps-container" id="workflow1"></div>
         </div>
+        <script>
+            const steps = {
+                'penelitian': [
+                    'ACC PI', 'Daftar Sidang', 'Sidang PI', 'ACC Revisi PI',
+                    'TTD Kasubag', 'TTD Kajur', 'Hardcover', 'Sumbang Buku', 'Sertifikat PI'
+                ],
+                'sarjana': [
+                    'Ajukan Sidang', 'Upload Dokumen', 'Verifikasi', 'Diverifikasi'
+                ],
+                'msib': [
+                    'Ajukan SR', 'Upload Dokumen', 'Verifikasi', 'Surat Rekomendasi'
+                ]
+            };
 
-        <!-- Sidang Sarjana -->
-        <div class="workflow-card">
-            <div class="workflow-header">
-                <div class="workflow-number sarjana-color">2</div>
-                <h2 class="workflow-title">Sidang Sarjana</h2>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar sarjana-color" style="width: 25%"></div>
-            </div>
-            <div class="steps-container" id="workflow2"></div>
-        </div>
+            function createSteps(containerId, stepsArray, color) {
+                const container = document.getElementById(containerId);
+                if (!container) return;
 
-        <!-- MSIB -->
-        <div class="workflow-card">
-            <div class="workflow-header">
-                <div class="workflow-number msib-color">3</div>
-                <h2 class="workflow-title">MSIB</h2>
-            </div>
-            <div class="progress-container">
-                <div class="progress-bar msib-color" style="width: 25%"></div>
-            </div>
-            <div class="steps-container" id="workflow3"></div>
-        </div>
-    </div>
+                container.innerHTML = ''; // Clear existing content
 
-    <script>
-        const workflows = {
-            penelitian: ['ACC PI', 'Daftar Sidang', 'Sidang PI', 'ACC Revisi PI', 'TTD Kasubag', 'TTD Kajur', 'Hardcover', 'Sumbang Buku', 'Sertifikat PI'],
-            sarjana: ['Ajukan Sidang', 'Upload Dokumen', 'Verifikasi', 'Diverifikasi'],
-            msib: ['Ajukan SR', 'Upload Dokumen', 'Verifikasi', 'Surat Rekomendasi']
-        };
+                stepsArray.forEach((step, index) => {
+                    const stepElement = document.createElement('div');
+                    stepElement.className = 'step';
+                    stepElement.style.backgroundColor = color;
+                    stepElement.innerHTML = `
+                <span class="step-number">${index + 1}</span>
+                <span class="step-text">${step}</span>
+            `;
+                    container.appendChild(stepElement);
+                });
+            }
 
-        function createWorkflow(containerId, steps, colorClass) {
-            const container = document.getElementById(containerId);
-            steps.forEach((step, index) => {
-                const stepEl = document.createElement('div');
-                stepEl.className = 'step-item';
-                stepEl.innerHTML = `
-                    <div class="step-number ${colorClass}">${index + 1}</div>
-                    <div class="step-text">${step}</div>
-                `;
-                container.appendChild(stepEl);
+            function updateProgress(progressId, stepsComplete, totalSteps) {
+                const progressBar = document.getElementById(progressId);
+                if (!progressBar) return;
+                const percentage = (stepsComplete / totalSteps) * 100;
+                progressBar.style.width = `${percentage}%`;
+            }
+
+            document.addEventListener('DOMContentLoaded', function () {
+                createSteps('workflow1', steps.penelitian, '#592693');
+                createSteps('workflow2', steps.sarjana, '#6baf5f');
+                createSteps('workflow3', steps.msib, '#4a6fa1');
+
+                updateProgress('progress1', 1, 9);
+                updateProgress('progress2', 1, 5);
+                updateProgress('progress3', 1, 5);
             });
-        }
-
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-
-        // Initialize workflows
-        createWorkflow('workflow1', workflows.penelitian, 'penelitian-color');
-        createWorkflow('workflow2', workflows.sarjana, 'sarjana-color');
-        createWorkflow('workflow3', workflows.msib, 'msib-color');
-    </script>
+        </script>
 </body>
+
 </html>
