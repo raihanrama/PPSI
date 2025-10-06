@@ -204,21 +204,6 @@ MIT License - Educational Purpose Only
 Copyright (c) 2024 [Nama Anda]
 ```
 
-## 🎯 Roadmap
-
-### Phase 1 (Current) ✅
-- [x] Basic CRUD operations
-- [x] Authentication system
-- [x] Email integration
-- [x] Responsive design
-
-### Phase 2 (Future) 📋
-- [ ] Advanced analytics
-- [ ] Mobile app
-- [ ] API development
-- [ ] Cloud deployment
-
----
 
 <div align="center">
 
