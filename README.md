@@ -211,6 +211,4 @@ Copyright (c) 2024 [Nama Anda]
 Made with ❤️ by **[Kelompok PPS - Muhammad Raihan Ramadhan, Muhamad Fadlan, Kevin Deniswara Harvian, Bobby Risky Susanto, Vhi Andra Pijar Z]**  
 Jurusan Sistem Informasi -  [Gunadarma University]
 
-[🔝 Back to top](#-ppsi---sistem-informasi-jurusan)
-
 </div>
