@@ -173,14 +173,6 @@ Proyek ini dikembangkan untuk keperluan akademik. Untuk kontribusi:
 4. Push to branch (`git push origin feature/AmazingFeature`)
 5. Buat Pull Request
 
-## 📝 Todo List
-
-- [ ] Implementasi API REST
-- [ ] Integrasi dengan sistem kampus
-- [ ] Mobile app development
-- [ ] Real-time notifications
-- [ ] Advanced reporting features
-- [ ] Multi-language support
 
 ## 🐛 Bug Reports
 
