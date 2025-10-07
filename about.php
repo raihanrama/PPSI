@@ -519,7 +519,7 @@
 
         <!-- Workflow sections -->
         <div class="workflow-container">
-            <h1 class="titlestep">1. Penelitian Ilmiah</h1>
+            <h1 class="titlestep">1. Penelitian Ilmiah Semester 6</h1>
             <div class="progress-bar">
                 <div class="progress" id="progress1"></div>
             </div>
@@ -594,5 +594,6 @@
 </body>
 
 </html>
+
 
 
