@@ -467,7 +467,7 @@
 
 
     <div class="container">
-        <h1 class="title">Sistem Administrasi Program Studi</h1>
+        <h1 class="title">Sistem Administrasi Program Studi Sistem Informasi</h1>
         <p class="subtitle">
             Sistem ini dirancang untuk membantu mahasiswa dan staf administrasi dalam menyelesaikan berbagai
             proses administrasi akademik secara efisien dan terstruktur. Dimana administrasi yang dapat dilakukan
@@ -594,4 +594,5 @@
 </body>
 
 </html>
+
 
