@@ -450,7 +450,7 @@
     <nav class="navbar">
         <div class="logo-container">
             <img src="assets/images/logo.png" alt="Logo Universitas" class="logo-image">
-            <span class="brand-text">SISTEM ADMINISTRASI</span>
+            <span class="brand-text">SISTEM ADMINISTRASI UNIVERSITAS GUNADARMA</span>
             <link rel="stylesheet" href="style.css">
         </div>
         <button class="hamburger" aria-label="Toggle navigation">
@@ -594,3 +594,4 @@
 </body>
 
 </html>
+
