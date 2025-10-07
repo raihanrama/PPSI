@@ -527,7 +527,7 @@
             </div>
         </div>
         <div class="workflow-container">
-            <h1 class="titlestep">2. Sidang Sarjana</h1>
+            <h1 class="titlestep">2. Daftar Online Sidang Sarjana</h1>
             <div class="progress-bar">
                 <div class="progress" id="progress2"></div>
             </div>
@@ -594,6 +594,7 @@
 </body>
 
 </html>
+
 
 
 
