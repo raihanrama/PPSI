@@ -150,12 +150,6 @@ CREATE TABLE praktik_industri (
 );
 ```
 
-## 🎨 Screenshot
-
-| Dashboard Admin | Login Page | Student Panel |
-|----------------|------------|---------------|
-| ![Dashboard](https://via.placeholder.com/250x150?text=Dashboard) | ![Login](https://via.placeholder.com/250x150?text=Login) | ![Student](https://via.placeholder.com/250x150?text=Student) |
-
 ## 🔧 Konfigurasi Email
 
 ```php
